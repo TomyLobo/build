@@ -933,7 +933,7 @@ def checkout():
     gitCloneOrUpdate(mod, gitRoot)
 
 def selfUpdate():
-  gitCloneOrUpdate("build", gitRoot)
+  gitCloneOrUpdate("build", 'https://github.com/TomyLobo/')
   newArgv = [sys.executable, buildScript, '--no-self-update']
   newArgv.extend(argv)
   if os.name == 'nt':
